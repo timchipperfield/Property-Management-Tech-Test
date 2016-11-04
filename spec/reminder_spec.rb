@@ -17,8 +17,7 @@ describe Reminder do
 
   it "returns the reminder dates for a given date and estates" do
     @estates = double(:estates)
-    @reminder_dates = {:date => "1st Jan 2009", :reminders => [{:estate_code => "0066S", :due_date => "1st Feb 2009"},
-                                                     {:estate_code => "0250S", :due_date => "23rd Jan 2009"}]}
+    @reminder_dates = [["0066S", "1st Feb 2009"], ["0250S", "28th Feb 2009"]]
     allow(@estates).to receive(:all).and_return([
       {:estate_code => "0066S", :service_charge_period => "Quarterly", :date_array => ["1st Feb",  "3rd May",  "1st Aug",  "5th Nov"]},
       {:estate_code => "0250S", :service_charge_period => "Twice a year", :date_array => ["28th Feb", "31st May", "31st Aug", "30th Nov"]}])
