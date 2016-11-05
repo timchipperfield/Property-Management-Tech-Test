@@ -6,7 +6,7 @@ class Reminder
 
   attr_reader :rules
 
-  def initialize(reminder_rules)
+  def initialize(reminder_rules = Rules.new)
     @rules = reminder_rules
   end
 
@@ -20,19 +20,10 @@ private
   def estates_with_selected_dates(selected_date, estates)
   	selected_estates = []
   	estates.all.each do |estate|
-  				months_before = service_charge_months(estate)
+  				months_before = @rules.evaluate(estate)
   				selected_estates << estate_dates(estate, selected_date, months_before)
   	end
   	selected_estates
-  end
-
-  def service_charge_months(estate)
-  	if estate[:service_charge_period] == "Quarterly"
-  		1
-  	elsif estate[:service_charge_period] == "Twice a year"
-  		2
-  	else raise "Estate Does Not Have a valid Service Charge Period"
-  	end
   end
 
   def estate_dates(estate, selected_date, months_before)
@@ -43,6 +34,15 @@ private
   	end
   	estates
   end
+
+  # def service_charge_months(estate)
+  #   if estate[:service_charge_period] == "Quarterly"
+  #     1
+  #   elsif estate[:service_charge_period] == "Twice a year"
+  #     2
+  #   else raise "Estate Does Not Have a valid Service Charge Period"
+  #   end
+  # end
 
   def date_with_year(selected_date, estate_date)
     selected_year = Date.parse(selected_date).year

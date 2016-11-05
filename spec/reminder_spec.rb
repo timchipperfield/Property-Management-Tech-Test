@@ -4,6 +4,8 @@ describe Reminder do
 
   before(:each) do
     @new_rules = double
+    allow(@new_rules).to receive(:evaluate).and_return(1)
+    allow(@new_rules).to receive(:evaluate).and_return(2)
     @reminder = Reminder.new(@new_rules)
   end
 
