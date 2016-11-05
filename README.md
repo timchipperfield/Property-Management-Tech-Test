@@ -69,3 +69,7 @@ Examples:
 +---------------+------------------------------+
 
 #Running Instructions
+
+To run the program from the command line, use irb and try the following at [the bottom of the feature test](https://github.com/timchipperfield/Property-Management-Tech-Test/blob/master/spec/feature_test_spec.rb)
+
+To run all tests, type rpsec into the command line
