@@ -1,3 +1,5 @@
+#this class is an example set of rules that is by default injected into Reminder
+
 class Rules
 
   def evaluate(estate)

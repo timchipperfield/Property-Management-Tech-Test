@@ -1,6 +1,7 @@
 require 'date'
 require 'fixnum_method_addition'
 
+#The reminder class takes rules as a param and has the behaviour of returning a table
 
 class Reminder
 
@@ -11,13 +12,13 @@ class Reminder
   end
 
   def on(date, estates)
-    information = estates_with_selected_dates(date, estates)
-    clean_formatting(information)
+    selected_estates_and_dates = estates_with_relevant_dates(date, estates)
+    clean_formatting(selected_estates_and_dates)
   end
 
-private
+  private
 
-  def estates_with_selected_dates(selected_date, estates)
+  def estates_with_relevant_dates(selected_date, estates)
   	selected_estates = []
   	estates.all.each do |estate|
   				months_before = @rules.evaluate(estate)
@@ -34,15 +35,6 @@ private
   	end
   	estates
   end
-
-  # def service_charge_months(estate)
-  #   if estate[:service_charge_period] == "Quarterly"
-  #     1
-  #   elsif estate[:service_charge_period] == "Twice a year"
-  #     2
-  #   else raise "Estate Does Not Have a valid Service Charge Period"
-  #   end
-  # end
 
   def date_with_year(selected_date, estate_date)
     selected_year = Date.parse(selected_date).year
