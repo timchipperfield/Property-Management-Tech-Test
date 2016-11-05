@@ -1,3 +1,5 @@
+#estates contain an array and can add an estate this array
+
 class Estates
 
 attr_reader :all

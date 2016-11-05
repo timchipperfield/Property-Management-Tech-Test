@@ -1,7 +1,7 @@
 require 'date'
 require 'fixnum_method_addition'
 
-#The reminder class takes rules as a param and has the behaviour of returning a table
+#The reminder class takes rules as a param + can return reminders for a given date
 
 class Reminder
 
@@ -12,8 +12,9 @@ class Reminder
   end
 
   def on(date, estates)
-    selected_estates_and_dates = estates_with_relevant_dates(date, estates)
-    clean_formatting(selected_estates_and_dates)
+    reminder_estates_and_dates = estates_with_relevant_dates(date, estates)
+    Printer.new.print(date, clean_formatting(reminder_estates_and_dates))
+    return clean_formatting(reminder_estates_and_dates)
   end
 
   private
@@ -53,8 +54,20 @@ class Reminder
     date.strftime("#{ordinal_day} %b %Y")
   end
 
-  def clean_formatting(information)
-    information.map {|estate| estate.compact.flatten }
+  def clean_formatting(reminder_estates_and_dates)
+    flattened = reminder_estates_and_dates.map {|estate| estate.compact.flatten }
+    if flattened[1].empty?
+      flattened.pop
+    end
+    check_if_no_reminders(flattened)
   end
+
+  def check_if_no_reminders(flattened_reminder_array)
+    if flattened_reminder_array[0].empty?
+      flattened_reminder_array[0] = "(no reminders)"
+    end
+    return flattened_reminder_array
+  end
+
 
 end

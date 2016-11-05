@@ -1,5 +1,3 @@
-require 'rules'
-
 describe Rules do
 
   before do

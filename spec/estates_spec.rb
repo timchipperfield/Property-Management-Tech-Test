@@ -1,5 +1,3 @@
-require 'estates'
-
 describe Estates do
 
   before(:each) do
