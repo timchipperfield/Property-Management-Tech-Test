@@ -55,11 +55,15 @@ class Reminder
   end
 
   def clean_formatting(reminder_estates_and_dates)
-    flattened = reminder_estates_and_dates.map {|estate| estate.compact.flatten }
-    if flattened[1].empty?
-      flattened.pop
+    flattened_reminder_array = reminder_estates_and_dates.map {|estate| estate.compact.flatten }
+    if_reminder_array_empty(flattened_reminder_array)
+    check_if_no_reminders(flattened_reminder_array)
+  end
+
+  def if_reminder_array_empty(flattened_reminder_array)
+    if flattened_reminder_array[1].empty?
+      flattened_reminder_array.pop
     end
-    check_if_no_reminders(flattened)
   end
 
   def check_if_no_reminders(flattened_reminder_array)

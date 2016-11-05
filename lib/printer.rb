@@ -24,17 +24,17 @@ class Printer
 
   def join_estate(estate)
     if estate[1].length > 1
-      if estate[1].length == 12
-        estate.join(" due date  ")
-      else
-        estate.join(" due date ")
-      end
+      size_of_estate(estate)
       else "(no reminders)"
     end
   end
 
   def size_of_estate(estate)
-
+    if estate[1].length == 12
+      estate.join(" due date  ")
+    else
+      estate.join(" due date ")
+    end
   end
 
   def create_table(rows)
