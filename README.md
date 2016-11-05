@@ -1,4 +1,4 @@
-#Property Management Tech Test [![Build Status](https://travis-ci.org/timchipperfield/property_mgmt_tt.svg?branch=master)](https://travis-ci.org/timchipperfield/property_mgmt_tt)[![Coverage Status](https://coveralls.io/repos/github/timchipperfield/Property-Management-Tech-Test/badge.svg?branch=master)](https://coveralls.io/github/timchipperfield/Property-Management-Tech-Test?branch=master)
+#Property Management Tech Test [![Build Status](https://travis-ci.org/timchipperfield/Property-Management-Tech-Test.svg?branch=master)](https://travis-ci.org/timchipperfield/Property-Management-Tech-Test)[![Coverage Status](https://coveralls.io/repos/github/timchipperfield/Property-Management-Tech-Test/badge.svg?branch=master)](https://coveralls.io/github/timchipperfield/Property-Management-Tech-Test?branch=master)
 
 #Description
 This is a command-line application for a property management company which identifies which
