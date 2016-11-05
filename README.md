@@ -1,4 +1,4 @@
-#Property Management Tech Test 
+#Property Management Tech Test [![Build Status](https://travis-ci.org/timchipperfield/property_mgmt_tt.svg?branch=master)](https://travis-ci.org/timchipperfield/property_mgmt_tt)[![Coverage Status](https://coveralls.io/repos/github/timchipperfield/Property-Management-Tech-Test/badge.svg?branch=master)](https://coveralls.io/github/timchipperfield/Property-Management-Tech-Test?branch=master)
 
 #Description
 This is a command-line application for a property management company which identifies which
@@ -25,6 +25,6 @@ Interface to the reminder system (Ruby):
 
 #Running Instructions
 
-To run the program from the command line, use irb and try the following at [the bottom of the feature test](https://github.com/timchipperfield/Property-Management-Tech-Test/blob/master/spec/feature_test_spec.rb)
+To run the program from the command line, use irb and try the following commands at [the bottom of the feature test](https://github.com/timchipperfield/Property-Management-Tech-Test/blob/master/spec/feature_test_spec.rb)
 
 To run all tests, type rpsec into the command line
