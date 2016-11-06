@@ -25,6 +25,8 @@ Interface to the reminder system (Ruby):
 
 #Running Instructions
 
-To run the program from the command line, use irb and try the following commands at [the bottom of the feature test](https://github.com/timchipperfield/Property-Management-Tech-Test/blob/master/spec/feature_test_spec.rb)
-
-To run all tests, type rpsec into the command line
+1. Clone Repo
+2. Use Bundle Install to install gems
+3. Open IRB on the terminal
+4. To run the program from the command line, try the following example commands in this [feature test](https://github.com/timchipperfield/Property-Management-Tech-Test/blob/master/spec/feature_test_spec.rb)
+5. To run all tests, type rpsec into the terminal
